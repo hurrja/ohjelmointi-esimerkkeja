@@ -11,20 +11,3 @@
     else
       rect (0, S, S, S);
   #+END_SRC
-
-* Mahdollisimman suuri ympyrä neliön muotoisen ikkunan halkaisijalle
-  #+BEGIN_SRC processing :exports code
-    size (600, 600);
-
-    final float X = 400;
-
-    float r;
-
-    if (X < width / 2)
-      r = X;
-    else
-      r = width - X;
-
-    float d = 2 * r;
-    ellipse (X, X, d, d);
-  #+END_SRC

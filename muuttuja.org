@@ -1,17 +1,3 @@
-* Neliö toisen ylä- tai alapuolelle ikkunan koosta riippuen
-  #+BEGIN_SRC processing :exports code
-    size (500, 600);
-
-    final float S = 100;
-
-    rect (0, 0, S, S);
-
-    if (width > height)
-      rect (S, 0, S, S);
-    else
-      rect (0, S, S, S);
-  #+END_SRC
-
 * Mahdollisimman suuri ympyrä neliön muotoisen ikkunan halkaisijalle
   #+BEGIN_SRC processing :exports code
     size (600, 600);
