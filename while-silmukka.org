@@ -1,0 +1,30 @@
+* Neliöitä vierekkäin kuvan yläreunaan
+  #+BEGIN_SRC processing :exports code
+    size (600, 600);
+
+    final float S = 70;
+
+    float x = 0;
+
+    while (x + S < width)
+    {
+      rect (x, 0, S, S);
+      x = x + S;
+    }
+  #+END_SRC
+* Eri värisiä ympyröitä sisäkkäin
+  #+BEGIN_SRC processing :exports code
+    size (800, 800);
+
+    colorMode (HSB, 100);
+    float d = width; // halkaisija
+    float k = width / 2; // keskikohta
+
+    while (d > 5)
+    {
+      float savy = d / width * 100; // savy välillä [0, 100]
+      fill (savy, 100, 100);
+      ellipse (k, k, d, d);
+      d = 0.8 * d;
+    }
+  #+END_SRC
