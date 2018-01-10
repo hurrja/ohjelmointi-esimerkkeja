@@ -1,0 +1,17 @@
+* Eri kuvio ja taustaväri vakion arvosta riippuen
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+    colorMode (HSB, 100);
+
+    final float P = 70;
+
+    if (P < 100)
+    {
+      background (0, 100, 100); // punainen tausta
+      strokeWeight (10); // paksut viivat
+      line (0, 0, width, height);
+      line (width, 0, 0, height);
+    }
+    else
+      background (35, 100, 100); // vihreä tausta
+  #+END_SRC
