@@ -1,0 +1,22 @@
+* muutetaan ohjelma käyttämään ~for~-silmukkaa
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+
+    float l = 0;
+
+    while (l < width)
+    {
+      line (l, 0, l, height);
+      l = l + 10;
+    }
+  #+END_SRC
+
+* ohjelma, jossa kaksi muuttujaa ja päivityslyhenteet
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+
+    final int S = 20;
+
+    for (float x = width - S, y = 0; x >= 0; x -= S, y += S / 2)
+      rect (x, y, S, S);
+  #+END_SRC
