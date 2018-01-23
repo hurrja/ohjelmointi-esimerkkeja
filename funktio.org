@@ -1,22 +1,27 @@
 * halutun kokoisia rasteja haluttuihin kohtiin funktion avulla
   #+BEGIN_SRC processing :exports code
+    // alkuasetukset tämän nimisessä funktiossa
     void setup ()
     {
       size (800, 600);
-      noLoop ();
+      noLoop (); // ei vielä animaatioita
     }
 
+    // piirtää rastin, keskikohta (x, y), leveys ja korkeus 2*s
     void rasti (float x, float y, float s)
     {
       line (x - s, y - s, x + s, y + s);
       line (x + s, y - s, x - s, y + s);
     }
 
+    // kaikki piirtäminen tässä funktiossa
     void draw ()
     {
+      // pari rastia
       rasti (100, 100, 20);
       rasti (400, 30, 10);
 
+      // rivi rasteja silmukan avulla
       final float S = 15;
       for (float x = S; x < width; x += 40)
         rasti (x, height / 2.0, S);
