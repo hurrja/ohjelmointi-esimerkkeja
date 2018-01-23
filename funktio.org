@@ -1,0 +1,25 @@
+* halutun kokoisia rasteja haluttuihin kohtiin funktion avulla
+  #+BEGIN_SRC processing :exports code
+    void setup ()
+    {
+      size (800, 600);
+      noLoop ();
+    }
+
+    void rasti (float x, float y, float s)
+    {
+      line (x - s, y - s, x + s, y + s);
+      line (x + s, y - s, x - s, y + s);
+    }
+
+    void draw ()
+    {
+      rasti (100, 100, 20);
+      rasti (400, 30, 10);
+
+      final float S = 15;
+      for (float x = S; x < width; x += 40)
+        rasti (x, height / 2.0, S);
+    }
+
+  #+END_SRC
