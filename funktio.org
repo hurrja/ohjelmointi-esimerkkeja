@@ -10,8 +10,10 @@
     // piirtää rastin, keskikohta (x, y), leveys ja korkeus 2*s
     void rasti (float x, float y, float s)
     {
-      line (x - s, y - s, x + s, y + s);
-      line (x + s, y - s, x - s, y + s);
+      // paikallisia muuttujia
+      float xMin = x - s, xMax = x + s, yMin = y - s, yMax = y + s;
+      line (xMin, yMin, xMax, yMax);
+      line (xMax, yMin, xMin, yMax);
     }
 
     // kaikki piirtäminen tässä funktiossa
