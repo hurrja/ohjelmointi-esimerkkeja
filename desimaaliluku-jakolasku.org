@@ -1,0 +1,19 @@
+* jakolasku kokonaisluvuilla
+  #+BEGIN_SRC processing :exports code
+    size (600, 600);
+    textSize (32);
+
+    text (2 / 3, 100, 100);
+    text (2 / 3.0, 200, 100);
+    text (2.0 / 3, 400, 100);
+
+  #+END_SRC
+* ympyrä keskelle, halkaisija 35\thinsp{}% ikkunan leveydestä
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+
+    final float D = 0.35 * width;
+
+    ellipse (width / 2.0, height / 2.0, D, D);
+
+  #+END_SRC
