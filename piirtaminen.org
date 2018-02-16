@@ -1,0 +1,22 @@
+* pari suorakulmiota osittain päällekkäin
+  - kahden piirtorivin järjestystä kannattaa vielä vaihdella
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+
+    rect (0, 0, 400, 200);
+    rect (200, 100, 300, 300);
+  #+END_SRC
+* salmiakkikuvio
+  - ~rect()~ -komennon piirtämissä nelikulmioissa sivut ovat aina
+    ikkunan sivujen suuntaiset
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+
+    quad (400, 0, 800, 300, 400, 600, 0, 300);
+  #+END_SRC
+* ruutukuvio kahdella kolmiolla
+  #+BEGIN_SRC processing :exports code
+    size (800, 400);
+    triangle (0, 0, 800, 0, 400, 400);
+    triangle (200, 200, 600, 200, 400, 0);
+  #+END_SRC
