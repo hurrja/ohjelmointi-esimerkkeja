@@ -1,0 +1,30 @@
+* kommentoitu esimerkki värien käytöstä
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+
+    colorMode (HSB, 100); // värit H(sävy) S(kylläisyys) B(kirkkaus) -arvoina, suurin arvo 100
+
+    fill (35, 100, 100); // vihreä täyttöväri (vihreä kynä käteen), kylläinen, kirkas
+    rect (100, 100, 200, 200); // vihreä neliö
+
+    fill (60, 50, 30); // sininen väri, vähemmän kylläinen ja tummempi
+    rect (300, 400, 50, 50); // sininen neliö
+  #+END_SRC
+
+* harmaasävyt sekä taustavärin ja ääriviivojen säätelyä
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+    colorMode (HSB, 100);
+
+    // vaaleansininen tausta
+    background (50, 20, 70);
+
+    fill (0); // musta täyttöväri
+    stroke (0, 100, 100); // punaiset ääriviivat
+    strokeWeight (5); // paksummat ääriviivat
+    rect (0, 0, 100, 100);
+
+    noStroke (); // ei ääriviivoja
+    fill (100); // valkoinen täyttöväri
+    rect (300, 400, 100, 50);
+  #+END_SRC
