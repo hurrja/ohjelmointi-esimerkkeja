@@ -1,0 +1,33 @@
+* kaksi suorakulmioita kulmittain, korkeus ja mittasuhde vakioina
+  - vakioita kannattaa vaihdella 
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+
+    final float K = 70; // suorakulmioiden korkeus
+    final float S = 1.5; // korkeuden ja leveyden suhde
+
+    final float L = K * S; // leveys lasketaan toisista vakioista
+
+    rect (0, 0, L, K);
+    rect (L, K, L, K);
+  #+END_SRC
+* suorakulmion sisälle kolmio
+  - kolmion kärkipisteiden paikat
+    - yläreunan piste (A) kolmasosan vasemmasta reunasta
+    - oikeassa reunassa oleva piste (B) korkeuden puolivälissä
+    - alareunan piste (C) kolmasosan oikeasta reunasta
+  - vakioita kannattaa taas vaihdella efektin hahmottamiseksi
+
+  #+BEGIN_SRC processing :exports code
+    size (800, 600);
+
+    // suorakulmion leveys ja korkeus
+    final float L = 400, K = 100; 
+    rect (0, 0, L, K);
+
+    final float xA = L / 3;
+    final float yB = K / 2;
+    final float xC = L - xA;
+
+    triangle (xA, 0, L, yB, xC, K);
+  #+END_SRC
