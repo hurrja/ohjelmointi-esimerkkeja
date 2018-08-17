@@ -11,3 +11,15 @@
     else
       rect (0, S, S, S);
   #+END_SRC
+
+* Punainen väri, jos vakion ~P~ arvo yli 100
+
+  #+begin_src processing :exports code
+    size (400, 400);
+    colorMode (HSB, 100);
+
+    final float P = 105;
+
+    if (P > 100)
+      background (0, 100, 100);
+  #+end_src
