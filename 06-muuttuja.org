@@ -2,15 +2,15 @@
   #+BEGIN_SRC processing :exports code
     size (600, 600);
 
-    final float X = 400;
+    final float X = 400; // keskipisteen x-koordinaatti
 
-    float r;
+    float r; // ympyrän säde
 
     if (X < width / 2)
       r = X;
     else
       r = width - X;
 
-    float d = 2 * r;
+    float d = 2 * r; // halkaisija
     ellipse (X, X, d, d);
   #+END_SRC
