@@ -1,4 +1,4 @@
-* piirretään tietty määrä neliöitä, parilliset punaisia
+* piirretään tietty määrä ympyröitä, parilliset punaisia
   #+BEGIN_SRC processing :exports code
     size (600, 400);
     colorMode (HSB, 100);
