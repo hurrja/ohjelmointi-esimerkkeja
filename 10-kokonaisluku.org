@@ -3,14 +3,30 @@
     size (600, 400);
     colorMode (HSB, 100);
 
-    final int D = 20;
+    final float D = 20; // ympyrän halkaisija
+    float x = D / 2.0; // ympyrän keskipisteen x-koordinaatti
+    for (int i = 1; i <= 20; i++, x += D)
+    {
+      if (i % 2 == 0)
+        fill (0, 100, 100);
+      else
+        fill (65, 100, 100);
+      ellipse (x, height / 2, D, D);
+    }
+  #+END_SRC
 
+* sama ilman erillistä muuttujaa \(x\)-koordinaatille (valinnainen)
+  #+BEGIN_SRC processing :exports code
+    size (600, 400);
+    colorMode (HSB, 100);
+
+    final float D = 20; // ympyrän halkaisija
     for (int i = 1; i <= 20; i++)
     {
       if (i % 2 == 0)
         fill (0, 100, 100);
       else
         fill (65, 100, 100);
-      ellipse ((i - 0.5) * D, height / 2, D, D);
+      ellipse (i * D - D / 2.0, height / 2, D, D);
     }
   #+END_SRC
