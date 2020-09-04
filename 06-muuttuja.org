@@ -1,3 +1,18 @@
+* Eri taustavärin sävy vakion arvosta riippuen
+  #+begin_src processing :exports code
+    size (800, 600);
+    colorMode (HSB, 100);
+
+    final float P = 90;
+
+    float savy;
+    if (P < 100)
+      savy = 35;
+    else
+      savy = 0;
+
+    background (savy, 100, 100);
+  #+end_src
 * Mahdollisimman suuri ympyrä neliön muotoisen ikkunan halkaisijalle
   #+BEGIN_SRC processing :exports code
     size (600, 600);
